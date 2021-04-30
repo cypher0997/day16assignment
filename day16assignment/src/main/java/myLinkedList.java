@@ -33,15 +33,35 @@ public class myLinkedList {
         newNode.data = Data;
         newNode.next = null;
 
-//        if(index == 0) {
-//            insertAtStart(Data);
-//        }
         node temp = Head;
         for(int i=0;i<index-1;i++) {
             temp = temp.next;
         }
         newNode.next = temp.next;
         temp.next = newNode;
+    }
+
+    public int search(int element)
+    {
+
+        if (Head == null) {
+            return -1;
+        }
+
+        int index = 0;
+        node temp = Head;
+
+        while (temp != null) {
+
+            if (temp.data == element) {
+                return index;
+            }
+
+            index++;
+            temp = temp.next;
+        }
+
+        return -1;
     }
 
     public void show(){
