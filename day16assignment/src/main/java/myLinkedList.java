@@ -28,6 +28,22 @@ public class myLinkedList {
 
     }
 
+    public void insertAt(int index, int Data) {
+        node newNode = new node();
+        newNode.data = Data;
+        newNode.next = null;
+
+//        if(index == 0) {
+//            insertAtStart(Data);
+//        }
+        node temp = Head;
+        for(int i=0;i<index-1;i++) {
+            temp = temp.next;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
     public void show(){
         node show = Head;
         while(show.next != null) {
