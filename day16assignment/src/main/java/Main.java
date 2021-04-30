@@ -9,10 +9,11 @@ public class Main {
         list.show();
         System.out.println(" ");
 
-        node temp = list.Head;
-        if(temp != null ) {
-            list.Head = temp.next;
-        }
+         node temp = list.Head;
+         while(temp.next.next != null) {
+             temp = temp.next;
+         }
+         temp.next = null;
 
         list.show();
     }
