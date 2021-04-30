@@ -10,6 +10,9 @@ public class LinkedListTest {
         list.add(30);
         list.add(70);
         int res = list.search(30);
-        Assertions.assertEquals(1, res);
+        list.insertAt(res+1, 40);
+        list.show();
+        int nextRes = list.search(40);
+        Assertions.assertEquals(res+1, nextRes);
     }
 }
