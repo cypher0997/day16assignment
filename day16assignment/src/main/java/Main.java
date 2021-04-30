@@ -2,9 +2,11 @@ public class Main {
     public static void main(String args[]) {
 
         myLinkedList list = new myLinkedList();
-        list.addInRecursive(70);
-        list.addInRecursive(30);
-        list.addInRecursive(56);
+        list.add(56);
+        list.add(30);
+        list.add(70);
         list.show();
+        System.out.println(" ");
+
     }
 }

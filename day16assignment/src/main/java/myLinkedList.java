@@ -1,6 +1,24 @@
 public class myLinkedList {
     node Head;
 
+    public void add(int Data) {
+
+        node n = new node();
+        n.data = Data;
+        n.next = null;
+
+        if(Head == null) {
+            Head = n;
+        }
+        else {
+            node temp = Head;
+            while(temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = n;
+        }
+    }
+
     public void addInRecursive(int Data) {
         node newNode = new node();
         newNode.data = Data;
