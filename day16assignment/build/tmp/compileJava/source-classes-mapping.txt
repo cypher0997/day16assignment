@@ -1,6 +1,6 @@
-myLinkedList.java
- myLinkedList
 node.java
  node
+myLinkedList.java
+ myLinkedList
 Main.java
  Main
